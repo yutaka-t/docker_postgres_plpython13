@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    container_name: postgres
+    hostname: postgres
+    build:
+      context: .
+    ports:
+      - 54332:5432
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: admin
+      POSTGRES_HOST_AUTH_METHOD: trust
+
